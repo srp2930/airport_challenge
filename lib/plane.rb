@@ -15,7 +15,7 @@ class Plane
     fail 'Warning! Bad weather means plane cannot land.' if bad_weather
     @flying = false
     @landed = true
-    airport.store(self)
+    #airport.store(self)
   end
 
   def takeoff_from(airport)

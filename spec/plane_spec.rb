@@ -8,6 +8,13 @@ describe Plane do
 
   it { is_expected.to respond_to(:flying)}
 
+  let(:airport2) { double(:airport2, store: nil) }
+
+  it 'works yay' do
+    expect(airport2).to receive(:store)
+    subject.land(airport2)
+  end
+
   describe '#landing' do
 
     it { is_expected.to respond_to(:land).with(1).argument }
