@@ -11,6 +11,9 @@ describe Plane do
   let(:airport2) { double(:airport2, store: nil) }
 
   it 'works yay' do
+    # we expect at some point during our it block/unit test that airport will be called with function store.
+    # This shows that subject.land is not only executing but is calling airport.store afterwards.
+    # airport.store can then be tested in airport_spec
     expect(airport2).to receive(:store)
     subject.land(airport2)
   end
